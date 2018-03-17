@@ -6,24 +6,22 @@
           var courseId = 1;
           var moduleId = 1;
           client.getUserDetails(function (error, data){                    
-            console.log(error, data)
-            var aboutme=document.getElementById("aboutme");
-            aboutme.innerText= data.secondName + " " + data.firstName;
-            var photo = document.getElementById("photo");
-            photo.src=data.avatar;
-            var email = document.getElementById("email");
-            email.innerText = data.email;
-            var city = document.getElementById("city");
-            city.innerText = "City:" + "  " + data.city;
-            var country = document.getElementById("country");
-            country.innerText = "Country:" + "  " + data.country;
-            var interests = document.getElementById("interests");
-            interests.innerText = "Interests:  " + data.interests
-            
-            document.getElementById("facebook").setAttribute("href",data.facebook);
-            document.getElementById("googleplus").setAttribute("href",data.googleplus);
-            
-
+              console.log(error, data)
+              var aboutme=document.getElementById("aboutme");
+              aboutme.innerText= data.secondName + " " + data.firstName;
+              var photo = document.getElementById("photo");
+              photo.src=data.avatar;
+              var email = document.getElementById("email");
+              email.innerText = data.email;
+              var city = document.getElementById("city");
+              city.innerText = "City:" + "  " + data.city;
+              var country = document.getElementById("country");
+              country.innerText = "Country:" + "  " + data.country;
+              var interests = document.getElementById("interests");
+              interests.innerText = "Interests:  " + data.interests
+              
+              document.getElementById("facebook").setAttribute("href",data.facebook);
+              document.getElementById("googleplus").setAttribute("href",data.googleplus);
           });
           client.getUserCoursesAndModules(function (error, data) {
             console.log(error, data);
@@ -57,26 +55,13 @@
                         li_occupation.innerText = occupation.title;
                         ul_occupation.appendChild(li_occupation);
                         div.onclick=function()
-                          {
+                        {
                           ul_occupation.classList.toggle('visible');            
                           ul_occupation.classList.toggle('custom-jumbotron');
-                          };             
+                        };             
                       });
                     });
                 });
           });
     });
-});
-          });
-          client.getCourseInfo(courseId, function (error, data) {
-            console.log(error, data)
-          });
-          client.getModuleInfo(moduleId, function (error, data) {
-            console.log(error, data)
-          });
-          client.getCourseTags(courseId, function(error, data) {
-            console.log(error, data);
-          });
-          client.getModuleTags(moduleId, function(error, data) {
-            console.log(error, data);
-          });
+});});
