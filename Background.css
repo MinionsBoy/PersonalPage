@@ -1,9 +1,9 @@
 body
 {
-    background: url("giphy.gif");
-    background-size: 100%;
+  background: url("giphy.gif");
+  background-size: 100%;
 }
-.container-fuild{
+.col-6{
   color:yellow;
   font-family: gabriola;
   text-align: left;  
@@ -14,16 +14,24 @@ body
   text-align: justify; 
   
 }
+#photo{
+  display: inline;
+}
 #aboutme{
   color:rgb(5, 255, 242); 
   font-size: xx-large;
   font-family: segoe script;
+  text-align: center;
+  
 }
 #email{
   color:rgba(5, 255, 243, 0.425);
+  text-align: center;
 }
 #courses{
+  text-align: center;
   color:lightseagreen;
+  font-size: large;
 }
 #modules li{
   list-style: none;
@@ -37,36 +45,12 @@ body
 
 }
 p{
-  color:rgba(5, 255, 243, 0.425);  
+  color:rgba(5, 255, 243, 0.425);
+  text-align: center;
 }
 
-audio:hover, audio:focus, audio:active{
-	-webkit-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-	-moz-box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-	box-shadow: 15px 15px 20px rgba(0,0, 0, 0.4);
-	-webkit-transform: scale(1.05);
-	-moz-transform: scale(1.05);
-  transform: scale(1.05);
-     
-}
-
-audio{
-  display: block;
-	-webkit-transition:all 0.5s linear;
-	-moz-transition:all 0.5s linear;
-	-o-transition:all 0.5s linear;
-	transition:all 0.5s linear;
-	-moz-box-shadow: 2px 2px 2px 0px #038803;
-	-webkit-box-shadow:  4px 2px 4px 0px #038803;
-	box-shadow: 2px 2px 2px 0px #038803;
-	-moz-border-radius:7px 7px 7px 7px ;
-	-webkit-border-radius:7px 7px 7px 7px ;
-  border-radius:7px 7px 7px 7px ;
-  cursor: pointer;
-  margin-left: 60%; 
-}
 .lead{
-  font-size: xx-large;
+  font-size: x-large;
 }
 #modules div:hover{
   text-decoration: none;
@@ -101,11 +85,12 @@ audio{
 	-webkit-border-radius:7px 7px 7px 7px ;
   border-radius:7px 7px 7px 7px ;
   cursor: pointer;
+  margin-left: 15%;
 }
 footer {
   left: 0;
   bottom: 10;
-  width: 100%;
+  width: 110%;
   height: 120px;
   background-color: rgba(0, 255, 13, 0.479);
   color: rgb(251, 255, 0);
